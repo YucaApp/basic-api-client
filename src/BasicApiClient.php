@@ -36,12 +36,14 @@ class BasicApiClient
      */
     public function __construct(array $options)
     {
+        // Assign the value to attributes
         foreach ($options as $key => $value) {
-            if (property_exists(self::class, $key)) {
+            if (property_exists($this, $key)) {
                 $this->$key = $value;
             }
         }
-
+        
+        // Validate the attributes
         $vars = get_object_vars($this);
         foreach ($vars as $key => $val) {
             if (is_null($val)) {
