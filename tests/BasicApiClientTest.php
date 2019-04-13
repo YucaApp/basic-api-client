@@ -1,8 +1,7 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-use InvalidArgumentException;
 use Yuca\BasicApiClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @group unit

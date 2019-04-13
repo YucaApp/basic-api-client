@@ -24,6 +24,17 @@ $client = new Yuca\BasicApiClient([
 $client->get('articles', ['limit' => 10]);
 
 $client->post('article/create', ['title' => 'Awesome!']);
+
+$client->put('article/1', [
+    'title' => 'New Title',
+    'body' => 'New Body'
+]);
+
+$client->patch('article/1', [
+    'title' => 'New Title'
+]);
+
+$client->delete('article/1');
 ```
 
 License
